@@ -14,7 +14,7 @@ def index():
 
 @app.route('/guess', methods=['POST'])
 def guess():
-    num = int(session['number'])
+    num = session['number']
     session['guess'] = request.form['guess']
     guess = int(session['guess'])
     if guess > num:
